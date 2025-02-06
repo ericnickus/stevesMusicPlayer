@@ -1,5 +1,37 @@
 # Getting Started with Create React App
 
+
+for steve
+Install:
+https://git-scm.com/download/win
+
+Install:
+https://nodejs.org/
+
+
+
+
+Open up console 
+
+Go to a directory you know. 
+
+Type: mkdir music-player
+Type: cd music-player 
+
+Type : git clone https://github.com/ericnickus/newmusicplayer.git
+
+When that’s done uploading, make sure to type: npm install 
+
+Then… type: npm start
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
