@@ -5,22 +5,68 @@ import './MusicPlayer.css';
 const getData = () => [
   {
     id: 1,
-    name: "Unnamed",
-    artist: "Eric Nickus",
-    cover: "/artwork/sick1.jpg",
-    audio: "/music/unnamed.mp3",
+    name: "Love Loss",
+    artist: "locjaw",
+    cover: "/artwork/locjaw_logo.png",
+    audio: "/music/Love_Loss.mp3",
     color: ["#F4A460", "#8B4513"],
     active: true
   },
   {
     id: 2,
-    name: "You could have got a job",
-    artist: "Eric Nickus",
-    cover: "/artwork/sick1.jpg",
-    audio: "/music/youcouldhavegottajob4.mp3",
+    name: "Someone",
+    artist: "locjaw",
+    cover: "/artwork/locjaw_logo.png",
+    audio: "/music/Someone.mp3",
+    color: ["#20B2AA", "#008B8B"],
+    active: false
+  },
+  {
+    id: 3,
+    name: "Come From",
+    artist: "locjaw",
+    cover: "/artwork/locjaw_logo.png",
+    audio: "/music/Come_From.mp3",
+    color: ["#F4A460", "#8B4513"],
+    active: true
+  },
+  {
+    id: 4,
+    name: "Real Life",
+    artist: "locjaw",
+    cover: "/artwork/locjaw_logo.png",
+    audio: "/music/Real_Life.mp3",
+    color: ["#20B2AA", "#008B8B"],
+    active: false
+  },
+  {
+    id: 5,
+    name: "Compromise",
+    artist: "locjaw",
+    cover: "/artwork/locjaw_logo.png",
+    audio: "/music/Compromise.mp3",
+    color: ["#F4A460", "#8B4513"],
+    active: true
+  },
+  {
+    id: 6,
+    name: "Bitch Slap",
+    artist: "locjaw",
+    cover: "/artwork/locjaw_logo.png",
+    audio: "/music/Bitch_Slap.mp3",
+    color: ["#20B2AA", "#008B8B"],
+    active: false
+  },
+  {
+    id: 7,
+    name: "God Complex",
+    artist: "locjaw",
+    cover: "/artwork/locjaw_logo.png",
+    audio: "/music/God_Complex.mp3",
     color: ["#20B2AA", "#008B8B"],
     active: false
   }
+
 ];
 
 const MusicPlayer = () => {
