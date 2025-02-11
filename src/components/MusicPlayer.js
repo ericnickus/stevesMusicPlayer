@@ -70,7 +70,7 @@ const getData = () => [
 ];
 
 const MusicPlayer = () => {
-  const [songs, setSongs] = useState(getData());
+//  const [songs, setSongs] = useState(getData());
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [libraryStatus, setLibraryStatus] = useState(false);
