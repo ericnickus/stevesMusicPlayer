@@ -70,13 +70,14 @@ const getData = () => [
 ];
 
 const MusicPlayer = () => {
-//  const [songs, setSongs] = useState(getData());
+  // Use a regular variable, not useState
+  const songs = getData();
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [libraryStatus, setLibraryStatus] = useState(false);
   const [isPlayingAll, setIsPlayingAll] = useState(false);
   const audioRef = useRef(new Audio());
-  const [audio, setAudio] = useState(audioRef.current);
+  const [audio, setAudio] = useState(audioRef.current); // This is fine, you *do* use setAudio
   const [songInfo, setSongInfo] = useState({
     currentTime: 0,
     duration: 0,
@@ -85,7 +86,7 @@ const MusicPlayer = () => {
 
   useEffect(() => {
     setAudio(audioRef.current);
-  }, [audioRef]);
+  }, []); // Empty dependency array is better here
 
   useEffect(() => {
     audio.src = currentSong.audio;
@@ -96,11 +97,14 @@ const MusicPlayer = () => {
 
   const handlePlayError = (error) => {
     console.error("Play Error:", error);
-    if (error.code === DOMException.ABORT_ERR) {
-      console.log("Play Interrupted (Expected)");
-    } else {
-      console.error("Unhandled Play Error", error);
-    }
+    //  The DOMException check is unnecessary in modern browsers.  .play()
+    //  returns a promise; any error will be caught by the .catch().
+    // if (error.code === DOMException.ABORT_ERR) {
+    //   console.log("Play Interrupted (Expected)");
+    // } else {
+    //   console.error("Unhandled Play Error", error);
+    // }
+    console.error("Unhandled Play Error", error); // Keep only this line
   };
 
   const timeUpdateHandler = () => {
@@ -240,7 +244,8 @@ const MusicPlayer = () => {
                 key={song.id}
                 onClick={() => {
                   setCurrentSong(song);
-                  if (isPlaying) audio.play().catch(handlePlayError);
+                  // This if statement isn't necessary. The useEffect handles playing.
+                  //if (isPlaying) audio.play().catch(handlePlayError);
                 }}
                 className={`song-item ${song.id === currentSong.id ? 'active' : ''}`}
               >
