@@ -14,6 +14,15 @@ const getData = () => [
   },
   {
     id: 2,
+    name: "Compromise",
+    artist: "locjaw",
+    cover: "/artwork/locjaw_logo.png",
+    audio: "/music/Compromise.mp3",
+    color: ["#F4A460", "#8B4513"],
+    active: true
+  },
+  {
+    id: 3,
     name: "Someone",
     artist: "locjaw",
     cover: "/artwork/locjaw_logo.png",
@@ -22,7 +31,7 @@ const getData = () => [
     active: false
   },
   {
-    id: 3,
+    id: 4,
     name: "Come From",
     artist: "locjaw",
     cover: "/artwork/locjaw_logo.png",
@@ -31,23 +40,15 @@ const getData = () => [
     active: true
   },
   {
-    id: 4,
+    id: 5,
     name: "Real Life",
     artist: "locjaw",
     cover: "/artwork/locjaw_logo.png",
-    audio: "/music/Real_Life.mp3",
+    audiori: "/music/Real_Life.mp3",
     color: ["#20B2AA", "#008B8B"],
     active: false
   },
-  {
-    id: 5,
-    name: "Compromise",
-    artist: "locjaw",
-    cover: "/artwork/locjaw_logo.png",
-    audio: "/music/Compromise.mp3",
-    color: ["#F4A460", "#8B4513"],
-    active: true
-  },
+  
   {
     id: 6,
     name: "Bitch Slap",
@@ -63,6 +64,15 @@ const getData = () => [
     artist: "locjaw",
     cover: "/artwork/locjaw_logo.png",
     audio: "/music/God_Complex.mp3",
+    color: ["#20B2AA", "#008B8B"],
+    active: false
+  },
+  {
+    id: 8,
+    name: "Because",
+    artist: "locjaw",
+    cover: "/artwork/locjaw_logo.png",
+    audio: "/music/Because.mp3",
     color: ["#20B2AA", "#008B8B"],
     active: false
   }
